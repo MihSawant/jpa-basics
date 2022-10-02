@@ -5,3 +5,8 @@ for storing the data with basic Student Schema.
 
 In this project, i have created few objects and using EntityManager add the objects into the context
 and persist them in the database. 
+
+**_Output Screenshot:_**
+![img.png](src/main/resources/output/img.png)
+
+All the objects are persisted into the database.
