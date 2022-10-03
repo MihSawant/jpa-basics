@@ -1,4 +1,4 @@
-package main;
+package main.strategy.identity_type;
 
 import entities.Student;
 import jakarta.persistence.EntityManagerFactory;
