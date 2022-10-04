@@ -6,7 +6,12 @@ import jakarta.persistence.*;
 @Table(name = "sweets")
 public class Sweet {
 
+
     @Id
+    @TableGenerator(name = "key_generator",
+            pkColumnName = "value",
+            pkColumnValue = "sweet_sequence",
+    valueColumnName = "name")
     @GeneratedValue(strategy = GenerationType.TABLE, generator = "key_generator")
     private Integer id;
 
