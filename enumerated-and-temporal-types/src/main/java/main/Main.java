@@ -1,11 +1,13 @@
 package main;
 
 import entities.Employee;
+import entities.Meeting;
 import entities.Shoe;
 import entities.enums.Currency;
 import jakarta.persistence.Persistence;
 
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.util.List;
 
 public class Main {
@@ -51,19 +53,27 @@ public class Main {
 //            shoes.forEach(entityManager::persist);
 //            entityManager.persist(s5);
 
-            var emp2JoinDate = LocalDate.of(2015, 4, 21);
+//            var emp2JoinDate = LocalDate.of(2015, 4, 21);
 
-            Employee emp1 = new Employee();
-            emp1.setName("Tom");
-            emp1.setJoiningDate(LocalDate.now());
-
-            Employee emp2 = new Employee();
-            emp2.setName("Jerry");
-            emp2.setJoiningDate(emp2JoinDate);
-
+//            Employee emp1 = new Employee();
+//            emp1.setName("Tom");
+//            emp1.setJoiningDate(LocalDate.now());
+//
+//            Employee emp2 = new Employee();
+//            emp2.setName("Jerry");
+//            emp2.setJoiningDate(emp2JoinDate);
+//
 //            entityManager.persist(emp1);
-             entityManager.persist(emp2);
+//             entityManager.persist(emp2);
 
+            Meeting meeting1 = new Meeting();
+            meeting1.setStartTime(LocalDateTime.now());
+
+            Meeting meeting2 = new Meeting();
+            meeting2.setStartTime(LocalDateTime.now().plusHours(4).plusMinutes(15));
+
+            entityManager.persist(meeting1);
+            entityManager.persist(meeting2);
 
             entityManager.getTransaction().commit();
         }catch(Exception ex){

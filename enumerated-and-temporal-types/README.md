@@ -7,7 +7,7 @@ use Enumerated Annotation and specify the value, by defaut it is ordinal
 and other option is String.
 
 ### enumerated-type-ordinal
-If we specify the value to be ordinal then in the mysql table it will use no.s 
+If we specify the value to be ordinal then in mysql table hibernate will use no.s 
 to identity the types, in this example i have used shoe entity and to store the currency
 of shoes, there are two types Indian Rupees and U.S. Dollars, for INR it will use 0 and for USD it will use 1.
 No. is used for the type.
@@ -15,7 +15,7 @@ No. is used for the type.
 ![img.png](img.png)
 
 ### enumerated-type-string
-In this case if we changed the value to string then mysql will 
+In this case if we changed the value to string then hibernate will 
 take the name of the type which is specified in Enum, so 
 here in Currency i have added one more type EUR and when i persist
 the entities, then in table it will store the name of type as string
