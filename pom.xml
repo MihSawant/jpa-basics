@@ -11,6 +11,7 @@
     <modules>
         <module>entity-and-context</module>
         <module>ids-and-values</module>
+        <module>enumerated-and-temporal-types</module>
     </modules>
 
     <properties>
