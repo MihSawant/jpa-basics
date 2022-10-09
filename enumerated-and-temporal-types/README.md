@@ -24,3 +24,12 @@ the entities, then in table it will store the name of type as string
 because we are storing String as the type and not INT._**
 
 ![img_1.png](img_1.png)
+
+
+# temporal types
+
+### Using LocalDate type
+Using LocalDate we can store _**only Date**_ in the table and using DATE type in MYSQL DB,
+here employees Joining Date is stored using DATE mapped as LocalDate in Java.
+
+![img_2.png](img_2.png)
