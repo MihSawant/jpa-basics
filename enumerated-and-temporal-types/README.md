@@ -13,3 +13,14 @@ of shoes, there are two types Indian Rupees and U.S. Dollars, for INR it will us
 No. is used for the type.
 
 ![img.png](img.png)
+
+### enumerated-type-string
+In this case if we changed the value to string then mysql will 
+take the name of the type which is specified in Enum, so 
+here in Currency i have added one more type EUR and when i persist
+the entities, then in table it will store the name of type as string
+
+**_Also the type of currency attribute is changed to VARCHAR so that we can
+because we are storing String as the type and not INT._**
+
+![img_1.png](img_1.png)
