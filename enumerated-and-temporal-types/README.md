@@ -33,3 +33,9 @@ Using LocalDate we can store _**only Date**_ in the table and using DATE type in
 here employees Joining Date is stored using DATE mapped as LocalDate in Java.
 
 ![img_2.png](img_2.png)
+
+### Using LocalDateTime type
+By using the LocalDateTime in the Entity and setting the TIMESTAMP in the database,
+hibernate will map the column with that of java type, and it will persist both Date and Time.
+
+![img_3.png](img_3.png)
