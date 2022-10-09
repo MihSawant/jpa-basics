@@ -15,7 +15,7 @@ public class Shoe {
 
     private Double price;
 
-    @Enumerated(value = EnumType.ORDINAL)
+    @Enumerated(value = EnumType.STRING)
     private Currency currency;
 
     public Integer getId() {

@@ -1,5 +1,5 @@
 package entities.enums;
 
 public enum Currency {
-    INR, USD
+    INR, USD, EUR
 }
