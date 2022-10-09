@@ -3,6 +3,7 @@ package entities;
 import jakarta.persistence.*;
 
 import java.time.LocalDateTime;
+import java.time.ZonedDateTime;
 
 @Table(name = "meetings")
 @Entity
@@ -13,7 +14,7 @@ public class Meeting {
     private Integer id;
 
     @Column(name = "start_time")
-    private LocalDateTime startTime;
+    private ZonedDateTime startTime;
 
     public Integer getId() {
         return id;
@@ -23,11 +24,11 @@ public class Meeting {
         this.id = id;
     }
 
-    public LocalDateTime getStartTime() {
+    public ZonedDateTime getStartTime() {
         return startTime;
     }
 
-    public void setStartTime(LocalDateTime startTime) {
+    public void setStartTime(ZonedDateTime startTime) {
         this.startTime = startTime;
     }
 }
