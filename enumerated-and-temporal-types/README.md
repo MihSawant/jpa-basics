@@ -39,3 +39,11 @@ By using the LocalDateTime in the Entity and setting the TIMESTAMP in the databa
 hibernate will map the column with that of java type, and it will persist both Date and Time.
 
 ![img_3.png](img_3.png)
+
+### Using ZonedDateTime 
+We changed the LocalDateTime with ZonedDateTime in order to store
+time with respect to different time zones like of  Chicago and Sydney, but
+hibernate is not able to store the time as Chicago and Sydney are completely
+different time zones still for both it is persisting same Hour.
+
+![img_4.png](img_4.png)

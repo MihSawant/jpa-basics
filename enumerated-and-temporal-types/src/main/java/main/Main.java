@@ -8,6 +8,7 @@ import jakarta.persistence.Persistence;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.time.ZoneId;
 import java.time.ZonedDateTime;
 import java.util.List;
 
@@ -73,9 +74,17 @@ public class Main {
             Meeting meeting2 = new Meeting();
             meeting2.setStartTime(ZonedDateTime.now().minusDays(2).plusHours(5).plusSeconds(21).plusMinutes(10));
 
-            entityManager.persist(meeting1);
-            entityManager.persist(meeting2);
+            Meeting meeting3 = new Meeting();
+            meeting3.setStartTime(ZonedDateTime.now(ZoneId.of("Australia/Sydney")));
+//            entityManager.persist(meeting1);
+//            entityManager.persist(meeting2);
 
+            Meeting meeting4 = new Meeting();
+            meeting4.setStartTime(ZonedDateTime.now(ZoneId.of("America/Chicago")));
+
+
+//            entityManager.persist(meeting3);
+            entityManager.persist(meeting4);
             entityManager.getTransaction().commit();
         }catch(Exception ex){
             entityManager.getTransaction().rollback();
