@@ -6,9 +6,10 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="embedded-types" />
+        <module name="ids-and-values" />
         <module name="enumerated-and-temporal-types" />
         <module name="entity-and-context" />
-        <module name="ids-and-values" />
       </profile>
     </annotationProcessing>
   </component>
