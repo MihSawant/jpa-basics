@@ -13,6 +13,7 @@
         <module>ids-and-values</module>
         <module>enumerated-and-temporal-types</module>
         <module>embedded-types</module>
+        <module>attribute-overrides-and-composed-primary-keys</module>
     </modules>
 
     <properties>

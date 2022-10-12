@@ -9,6 +9,7 @@
         <module name="embedded-types" />
         <module name="ids-and-values" />
         <module name="enumerated-and-temporal-types" />
+        <module name="attribute-overrides-and-composed-primary-keys" />
         <module name="entity-and-context" />
       </profile>
     </annotationProcessing>
