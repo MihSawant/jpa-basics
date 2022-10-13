@@ -15,3 +15,10 @@ Address type then mark it with **AttributeOverride** annotation. and specify the
 in java class to that field and in column field give mark it with **_@Column(name = "actual_name")_**.
 
 ![img.png](img.png)
+
+
+We can use **AttributeOverrides annotation** and instead of writing annotation
+for every attribute, in case we have many of couple of them, then use this as an
+array of AttributeOverride and we have only one Annotation all together.
+
+![img_1.png](img_1.png)
