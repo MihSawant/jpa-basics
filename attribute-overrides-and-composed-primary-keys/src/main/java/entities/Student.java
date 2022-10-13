@@ -17,8 +17,10 @@ public class Student {
     private Integer sapId;
 
     @Embedded
-    @AttributeOverride(name = "flatNumber", column = @Column(name = "flat_no"))
-    @AttributeOverride(name = "cty", column = @Column(name = "city"))
+    @AttributeOverrides({
+            @AttributeOverride(name = "flatNumber", column = @Column(name = "flat_no")),
+            @AttributeOverride(name = "cty", column = @Column(name = "city"))
+    })
     private Address address;
 
     public Integer getId() {

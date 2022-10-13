@@ -38,6 +38,15 @@ public class Main {
         st3.getAddress().setFlatNumber("20A");
         st3.getAddress().setStreet("star-park");
 
+        Student st4 = new Student();
+        st4.setName("Madhuram");
+        st4.setSapId(5162);
+        st4.setAddress(new Address());
+
+        Address st4Address = st4.getAddress();
+        st4Address.setCty("Jodhpur");
+        st4Address.setStreet("NWRoad");
+        st4Address.setFlatNumber("H01");
 
         try{
             entityManager.getTransaction().begin();
@@ -47,7 +56,8 @@ public class Main {
 
 //            entityManager.persist(st1);
 //            entityManager.persist(st2);
-            entityManager.persist(st3);
+//            entityManager.persist(st3);
+            entityManager.persist(st4);
 
             entityManager.getTransaction().commit();
         }catch (Exception e){
