@@ -22,3 +22,18 @@ for every attribute, in case we have many of couple of them, then use this as an
 array of AttributeOverride and we have only one Annotation all together.
 
 ![img_1.png](img_1.png)
+
+# Composed Primary Keys
+If we have more than one primary key in our table so in
+order to do it in hibernate:
+
+1. In this example I have a table employee with two primary keys
+    id and emp_no, according to JPA specification we will have to
+    create Entity and Table as regular and mark the fields with PK as Id
+    Now create other class that has the exact same fields as that of PK in 
+   Entity and should implement Serializable Marker Interface.
+   In Entity class use IdClass annotation, and it takes the class which represents the Composed primary key.
+   
+  We have to create separate table for representation of composed primary key.
+  
+  ![img_2.png](img_2.png)
