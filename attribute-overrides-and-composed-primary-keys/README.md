@@ -37,3 +37,8 @@ order to do it in hibernate:
   We have to create separate table for representation of composed primary key.
   
   ![img_2.png](img_2.png)
+
+2. In second method we use EmbeddedId, In package pk I have created a class EmployeePK with Embeddable annotation and implement the Serializable marker interface.
+Then we need to modify the Employee class, and create the field EmployeePK and use EmbeddedId annotation so that hibernate knows that we are going to have composed primary keys and then AtrributeOverride as we cannot use Column to define the name of column in table.
+
+![img_3.png](img_3.png)
