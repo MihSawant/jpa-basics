@@ -2,6 +2,9 @@ package pk;
 
 import java.io.Serializable;
 
+import jakarta.persistence.Embeddable;
+
+@Embeddable
 public class EmployeePK implements Serializable {
 
     private Integer id;

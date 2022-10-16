@@ -1,9 +1,8 @@
 package main;
 
-import embedded.Address;
 import entities.Employee;
-import entities.Student;
 import jakarta.persistence.Persistence;
+import pk.EmployeePK;
 
 import java.util.concurrent.atomic.AtomicInteger;
 
@@ -56,28 +55,27 @@ public class Main {
         try{
             entityManager.getTransaction().begin();
 
+           
+            EmployeePK emp1PK = new EmployeePK();
+            emp1PK.setId(autoInt.incrementAndGet());
+            emp1PK.setEmpCode("AAAA");
 
-
-
-
-//            entityManager.persist(st1);
-//            entityManager.persist(st2);
-//            entityManager.persist(st3);
-//            entityManager.persist(st4);
-
+            EmployeePK emp2PK = new EmployeePK();
+            emp2PK.setId(autoInt.incrementAndGet());
+            emp2PK.setEmpCode("BBBB");
 
             Employee emp1 = new Employee();
             emp1.setName("Tomy");
-            emp1.setId(autoInt.incrementAndGet());
-            emp1.setEmpCode("AAAA");
+            emp1.setEmployeePK(emp1PK);
+            
 
             Employee emp2 = new Employee();
             emp2.setName("Marry");
-            emp2.setId(autoInt.incrementAndGet());
-            emp2.setEmpCode("BBBB");
+            emp2.setEmployeePK(emp2PK);
 
             entityManager.persist(emp1);
             entityManager.persist(emp2);
+
 
             entityManager.getTransaction().commit();
         }catch (Exception e){

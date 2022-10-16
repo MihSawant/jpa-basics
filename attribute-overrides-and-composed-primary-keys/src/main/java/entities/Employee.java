@@ -5,34 +5,23 @@ import pk.EmployeePK;
 
 @Table(name = "employees")
 @Entity
-@IdClass(EmployeePK.class)
 public class Employee {
 
-    @Id
-    private Integer id;
-
-    @Id
-    @Column(name = "emp_no")
-    private String empCode;
+    @EmbeddedId
+    @AttributeOverride(name = "empCode", column = @Column(name="emp_code"))
+    private EmployeePK employeePK;
 
     private String name;
 
-    public Integer getId() {
-        return id;
+    public EmployeePK gEmployeePK(){
+        return employeePK;
     }
 
-    public void setId(Integer id) {
-        this.id = id;
+    public void setEmployeePK(EmployeePK employeePK){
+        this.employeePK = employeePK;
     }
 
-    public String getEmpCode() {
-        return empCode;
-    }
-
-    public void setEmpCode(String empCode) {
-        this.empCode = empCode;
-    }
-
+    
     public String getName() {
         return name;
     }
