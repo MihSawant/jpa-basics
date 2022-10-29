@@ -8,6 +8,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="embedded-types" />
         <module name="ids-and-values" />
+        <module name="one-to-many-secondary-tables" />
         <module name="enumerated-and-temporal-types" />
         <module name="attribute-overrides-and-composed-primary-keys" />
         <module name="entity-and-context" />
