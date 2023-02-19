@@ -14,6 +14,7 @@
         <module>enumerated-and-temporal-types</module>
         <module>embedded-types</module>
         <module>attribute-overrides-and-composed-primary-keys</module>
+        <module>one-to-one-secondary-tables</module>
     </modules>
 
     <properties>
