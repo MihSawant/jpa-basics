@@ -21,8 +21,15 @@ public class Main {
             c2.setFirstLine("Kandivali East");
             c2.setPinCode("2201");
 
-            em.persist(c1);
-            em.persist(c2);
+            Customer c3 = new Customer();
+            c3.setName("suresh");
+            c3.setFirstLine("goregaon");
+            c3.setProductName("smartphone");
+            c3.setPinCode("3309");
+
+//            em.persist(c1);
+//            em.persist(c2);
+              em.persist(c3);
             em.getTransaction().commit();
             em.close();
         }catch (Exception ex){

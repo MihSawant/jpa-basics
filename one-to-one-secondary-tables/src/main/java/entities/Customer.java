@@ -5,6 +5,7 @@ import jakarta.persistence.*;
 @Entity
 @Table(name = "customers")
 @SecondaryTable(name = "address", pkJoinColumns = @PrimaryKeyJoinColumn(name = "customer"))
+@SecondaryTable(name = "orders", pkJoinColumns = @PrimaryKeyJoinColumn(name = "c_id"))
 public class Customer {
 
     @Id
@@ -19,6 +20,9 @@ public class Customer {
 
     @Column(table = "address", name = "pin_code")
     private String pinCode;
+
+    @Column(table = "orders", name = "product_name")
+    private String productName;
 
     public Customer(){}
 
@@ -36,6 +40,14 @@ public class Customer {
 
     public void setPinCode(String pinCode) {
         this.pinCode = pinCode;
+    }
+
+    public void setProductName(String productName) {
+        this.productName = productName;
+    }
+
+    public String getProductName() {
+        return productName;
     }
 
     public int getId() {
