@@ -4,8 +4,12 @@ import jakarta.persistence.*;
 
 @Entity
 @Table(name = "customers")
-@SecondaryTable(name = "address", pkJoinColumns = @PrimaryKeyJoinColumn(name = "customer"))
-@SecondaryTable(name = "orders", pkJoinColumns = @PrimaryKeyJoinColumn(name = "c_id"))
+@SecondaryTables(
+        {
+                @SecondaryTable(name = "address", pkJoinColumns = @PrimaryKeyJoinColumn(name = "customer")),
+                @SecondaryTable(name = "orders", pkJoinColumns = @PrimaryKeyJoinColumn(name = "c_id"))
+        }
+)
 public class Customer {
 
     @Id
