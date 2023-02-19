@@ -1,9 +1,7 @@
 package main;
 
-import entities.Student;
+import entities.Customer;
 import jakarta.persistence.Persistence;
-
-import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
@@ -13,21 +11,18 @@ public class Main {
         try{
             em.getTransaction().begin();
 
-            Student s1 = new Student();
-            s1.setName("Mihir");
-            s1.setCourseName("MCA");
+            Customer c1 = new Customer();
+            c1.setName("hari");
+            c1.setFirstLine("Malad East");
+            c1.setPinCode("1234");
 
+            Customer c2 = new Customer();
+            c2.setName("yash");
+            c2.setFirstLine("Kandivali East");
+            c2.setPinCode("2201");
 
-           Student s2 = new Student();
-           s2.setName("Hari");
-           s2.setCourseName("MCA");
-
-           Student s3 = new Student();
-           s3.setName("Soumesh");
-           s3.setCourseName("MBA-TECH");
-
-            List.of(s2, s3).forEach(em::persist);
-
+            em.persist(c1);
+            em.persist(c2);
             em.getTransaction().commit();
             em.close();
         }catch (Exception ex){
