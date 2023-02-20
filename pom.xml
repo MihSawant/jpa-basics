@@ -15,6 +15,7 @@
         <module>embedded-types</module>
         <module>attribute-overrides-and-composed-primary-keys</module>
         <module>one-to-one-secondary-tables</module>
+        <module>one-to-one-relationship</module>
     </modules>
 
     <properties>
